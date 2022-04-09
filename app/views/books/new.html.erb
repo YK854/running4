@@ -1,0 +1,17 @@
+<h4>新規投稿画面</h4>
+<p>こちらは新規で本の情報を入力するフォームになります！</p>
+<div>
+    <%= form_with model:@book,url:books_path, local:true do |f| %>
+        <div>
+            <%= f.label :title %>
+            <%= f.text_field :title %>
+        </div>
+        <div>
+            <%= f.label :body %>
+            <%= f.text_area :body %>
+        </div>
+        <div>
+            <%= f.submit '保存' %>
+        </div>
+    <% end %>
+</div>

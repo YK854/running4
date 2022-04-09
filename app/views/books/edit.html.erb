@@ -1,0 +1,17 @@
+<h4>投稿内容編集画面</h4>
+<p>こちらは投稿内容の編集画面になります！</p>
+<div>
+    <%= form_with model:@book,url:book_path(@book.id), local:true do |f| %>
+        <div>
+            <%= f.label :title %>
+            <%= f.text_field :title %>
+        </div>
+        <div>
+            <%= f.label :body %>
+            <%= f.text_area :body %>
+        </div>
+        <div>
+            <%= f.submit '保存' %>
+        </div>
+    <% end %>
+</div>
